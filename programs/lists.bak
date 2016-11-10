@@ -1,0 +1,36 @@
+
+(define (member? element list)
+  (if (null? list)
+      #f
+      (or (= (car list) element) (member? element (cdr list)))))
+
+(define (my-length list)
+  (if (null? list)
+      0
+      (+ 1 (my-length (cdr list)))))
+
+(define (nth l1st number)
+  (define (helper index currentEl currList)
+    (if (= index number)
+        currentEl
+        (if (null? currList)
+            #f
+            (helper (+ index 1) (car currList) (cdr CurrList)))
+
+
+    ))
+  (helper 0 (car l1st) (cdr l1st))
+  )
+
+
+(define (my-append l1 l2)
+  (if (null? l1)
+      l2
+      (cons (car l1) (my-append (cdr l1) l2))))
+
+(my-append `(1 2 3 4) `(5 6 7 8))
+
+(nth `(1 2) 199)
+  
+  
+
